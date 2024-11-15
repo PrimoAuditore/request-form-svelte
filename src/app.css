@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter var', Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  --primary: #111F51;
+  --primary-light: #1a2f7a;
+  --accent: #19CEDA;
+  --accent-light: #3dd8e2;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary;
+  }
+
+  button {
+    @apply transition-colors duration-200;
+  }
+
+  input, select, textarea {
+    @apply border-primary/20 focus:border-accent focus:ring-accent;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-light focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent-light focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+}
